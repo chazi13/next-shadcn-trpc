@@ -25,3 +25,59 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer base {
+  :root {
+    --background: 138 100% 95%;
+    --foreground: 138 5% 10%;
+    --card: 138 50% 90%;
+    --card-foreground: 138 5% 15%;
+    --popover: 138 100% 95%;
+    --popover-foreground: 138 100% 10%;
+    --primary: 138 74% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 138 30% 70%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 100 30% 85%;
+    --muted-foreground: 138 5% 35%;
+    --accent: 100 30% 80%;
+    --accent-foreground: 138 5% 15%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 138 5% 90%;
+    --border: 138 30% 50%;
+    --input: 138 30% 26%;
+    --ring: 138 74% 38%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 138 50% 10%;
+    --foreground: 138 5% 90%;
+    --card: 138 50% 10%;
+    --card-foreground: 138 5% 90%;
+    --popover: 138 50% 5%;
+    --popover-foreground: 138 5% 90%;
+    --primary: 138 74% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 138 30% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 100 30% 25%;
+    --muted-foreground: 138 5% 60%;
+    --accent: 100 30% 25%;
+    --accent-foreground: 138 5% 90%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 138 5% 90%;
+    --border: 138 30% 26%;
+    --input: 138 30% 26%;
+    --ring: 138 74% 38%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
