@@ -1,40 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Here’s the updated `README.md` to reflect your use of `pnpm` and Node.js 22:
+
+---
+
+# Next.js Starter Template with ShadCN and tRPC
+
+This is a starter template for building web applications using [Next.js](https://nextjs.org/), [ShadCN](https://shadcn.dev/), and [tRPC](https://trpc.io/). It provides a basic setup with pre-configured tools and libraries to help you get started with a modern, type-safe, and scalable web application.
+
+## Features
+
+- **Next.js** for React-based server-side rendering and static site generation.
+- **ShadCN** for building reusable components with Tailwind CSS.
+- **tRPC** for end-to-end type-safe APIs without needing to write separate client code.
+- **TypeScript** for type safety throughout the project.
+- **ESLint** and **Prettier** for code quality and formatting.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js (>= 22.x)
+- pnpm (>= 9.x)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/chazi13/next-shadcn-trpc.git
+   cd next-shadcn-trpc
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   pnpm install
+   ```
+
+### Running the Development Server
+
+You can start the development server with the following command:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the app running.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+To build the app for production:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+pnpm build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Project Structure
 
-## Learn More
+Here's an overview of the project structure:
 
-To learn more about Next.js, take a look at the following resources:
+```
+.
+├── public/                # Static assets
+├── src/
+│   ├── pages/             # Next.js pages
+│   ├── components/        # Reusable UI components (with ShadCN)
+│   ├── server/            # tRPC routers and procedures
+│   ├── styles/            # Global styles (including Tailwind setup)
+│   └── utils/             # Utility functions
+├── .eslintrc.json         # ESLint configuration
+├── next.config.js         # Next.js configuration
+└── tsconfig.json          # TypeScript configuration
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Available Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `pnpm dev` – Start the development server.
+- `pnpm build` – Create a production build.
+- `pnpm start` – Start the production server.
+- `pnpm lint` – Run ESLint to check code for issues.
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Feel free to open issues or submit pull requests if you find bugs or improvements.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
