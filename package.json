@@ -8,9 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "prettier --write --list-different \"**/*.{ts,tsx,md}\"",
     "lint-staged": "pnpm lint && pnpm typecheck && pnpm format",
-    "prepare": "husky"
+    "prepare": "husky",
+    "ui-add": "pnpm dlx shadcn add && prettier --write --list-different src/components/ui && pnpm lint --fix"
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.0",
@@ -24,8 +25,8 @@
     "husky": "9.1.6",
     "lucide-react": "^0.445.0",
     "next": "14.2.13",
-    "react-dom": "^18",
     "react": "^18",
+    "react-dom": "^18",
     "superjson": "^2.2.1",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
@@ -51,7 +52,7 @@
     "prettier": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.6",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "5.5.4"
   },
   "packageManager": "pnpm@9.11.0"
 }
