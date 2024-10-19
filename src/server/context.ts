@@ -39,7 +39,7 @@ export async function createContext(opts: CreateNextContextOptions) {
     token = opts.req.cookies.token;
   }
 
-  const contextInner = await createContextInner({ token });
+  const contextInner = await createContextInner({ ...opts, token });
 
   return {
     ...contextInner,
